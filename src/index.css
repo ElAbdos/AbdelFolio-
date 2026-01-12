@@ -1,0 +1,59 @@
+/* ==========================================================================
+   THÈME SOMBRE
+   ========================================================================== */
+:root {
+   --bg-primary: #050505;
+   --bg-secondary: #101010;
+   --text-primary: #ffffff;
+   --text-secondary: #b0b0d0;
+   --text-accent: #8f7aff;
+   --text-gradient-start: #8f7aff;
+   --text-gradient-mid: #a98fff;
+   --text-gradient-end: #8f7aff;
+   --nav-bg: rgba(15, 15, 35, 0.6);
+   --nav-border: rgba(255, 255, 255, 0.08);
+   --nav-hover-border: rgba(143, 122, 255, 0.2);
+   --nav-shadow: rgba(0, 0, 0, 0.2);
+   --card-bg: rgba(255, 255, 255, 0.03);
+   --card-border: rgba(255, 255, 255, 0.05);
+   --grid-color: rgba(143, 122, 255, 0.03);
+   --glow-color: rgba(143, 122, 255, 0.08);
+   --glow-secondary: rgba(107, 80, 255, 0.05);
+   --accent-rgb: 143, 122, 255;
+   --btn-border: rgba(255, 255, 255, 0.2);
+   --element-bg: rgba(255, 255, 255, 0.03);
+   --element-border: rgba(255, 255, 255, 0.08);
+   --element-hover: rgba(255, 255, 255, 0.08);
+   --card-color: #8f7aff;
+   --accent-color: var(--card-color);
+}
+
+/* ==========================================================================
+   THÈME CLAIR
+   ========================================================================== */
+[data-theme='light'] {
+   --bg-primary: #f8f9fa;
+   --bg-secondary: #ffffff;
+   --text-primary: #111111;
+   --text-secondary: #444444;
+   --text-accent: #d63384;
+   --text-gradient-start: #d63384;
+   --text-gradient-mid: #e85d9c;
+   --text-gradient-end: #d63384;
+   --nav-bg: rgba(255, 255, 255, 0.95);
+   --nav-border: rgba(0, 0, 0, 0.1);
+   --nav-hover-border: rgba(214, 51, 132, 0.4);
+   --nav-shadow: rgba(0, 0, 0, 0.05);
+   --card-bg: #ffffff;
+   --card-border: rgba(0, 0, 0, 0.1);
+   --grid-color: rgba(0, 0, 0, 0.05);
+   --glow-color: rgba(214, 51, 132, 0.05);
+   --glow-secondary: rgba(255, 182, 193, 0.15);
+   --accent-rgb: 214, 51, 132;
+   --btn-border: rgba(0, 0, 0, 0.1);
+   --element-bg: rgba(0, 0, 0, 0.04);
+   --element-border: rgba(0, 0, 0, 0.1);
+   --element-hover: rgba(0, 0, 0, 0.08);
+   --card-color: #d63384;
+   --accent-color: var(--card-color);
+}
