@@ -10,6 +10,13 @@ export const translations = {
         hero: {
             subtitle_prefix: 'Je suis',
             subtitle_highlight: 'Passionné d\'informatique',
+            internship_badge: 'Recherche stage 12-16 semaines (Mars 2026)',
+            typewriter_texts: [
+                "Passionné d'informatique",
+                "Développeur Full Stack",
+                "Créatif & Rigoureux",
+                "Autonome & Proactif"
+            ],
             bio: 'Étudiant passionné d\'informatique, j\'ai pu acquérir une vision globale du domaine grâce à mon cursus diversifié. De l\'infrastructure aux bases de données, du développement à l\'intelligence artificielle, en passant par la sécurité informatique. Cette approche pluridisciplinaire me permet de créer des solutions numériques innovantes en combinant créativité, performance technique et professionnalisme.',
             cta_primary: 'Télécharger CV',
             cta_secondary: 'Voir mes projets',
@@ -17,6 +24,12 @@ export const translations = {
             social: {
                 connect: 'Me retrouver',
                 available: 'Disponible pour opportunités'
+            },
+            stats: {
+                years: "Années d'études",
+                projects: "Projets réalisés",
+                tech: "Technologies maitrisés",
+                internship: "Semaines de stage"
             }
         },
 
@@ -142,6 +155,13 @@ export const translations = {
         hero: {
             subtitle_prefix: 'I am',
             subtitle_highlight: 'Passionate about IT',
+            internship_badge: 'Seeking 12-16 week internship (March 2026)',
+            typewriter_texts: [
+                "Passionate about IT",
+                "Full Stack Developer",
+                "Creative & Rigorous",
+                "Autonomous & Proactive"
+            ],
             bio: 'Passionate computer science student, I have acquired a global vision of the field through my diversified curriculum. From infrastructure to databases, from development to artificial intelligence, including IT security. This multidisciplinary approach allows me to create innovative digital solutions by combining creativity, technical performance, and professionalism.',
             cta_primary: 'Download CV',
             cta_secondary: 'View my projects',
@@ -149,6 +169,12 @@ export const translations = {
             social: {
                 connect: 'Connect with me',
                 available: 'Open for opportunities'
+            },
+            stats: {
+                years: "Years of study",
+                projects: "Projects completed",
+                tech: "Technologies mastered",
+                internship: "Weeks of internship"
             }
         },
 
