@@ -1,0 +1,54 @@
+[data-theme='light'] .skill-card-3d {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='light'] .skill-bar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .tool-chip, [data-theme='light'] .mobile-nav-item {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .skills-grid-pattern {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+[data-theme='light'] .skills-bg-gradient {
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent, #8f7aff) 15%, transparent 50%);
+}
+
+[data-theme='light'] .orbit-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .orbit-item:hover, [data-theme='light'] .orbit-item.active {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme='light'] .orbit-icon {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme='light'] .orbit-label {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme='light'] .orbit-item:hover .orbit-label {
+    color: var(--text-primary);
+}
+
+[data-theme='light'] .skill-tag {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .section-label {
+    color: var(--text-secondary);
+}

@@ -1,0 +1,134 @@
+@media (min-width: 1200px) {
+    .skills-orbit-container {
+        display: block;
+    }
+
+    .skills-mobile-nav {
+        display: none;
+    }
+
+    .skills-container-ultra {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .skills-header-ultra {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .skills-orbit-container {
+        justify-self: center;
+        max-width: 500px;
+    }
+
+    .skills-showcase {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .skills-orbit-container {
+        display: none;
+    }
+
+    .skills-section {
+        padding: 80px 20px;
+    }
+
+    .skills-container-ultra {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 60px 15px;
+    }
+
+    .skill-card-3d {
+        padding: 30px 24px;
+        border-radius: 24px;
+    }
+
+    .skill-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .skill-card-title {
+        font-size: 28px;
+    }
+
+    .skill-card-description {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .mobile-nav-item {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .mobile-nav-item span {
+        display: none;
+    }
+
+    .mobile-nav-item {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .skills-grid-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-title-ultra {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .skills-subtitle-ultra {
+        font-size: 15px;
+    }
+
+    .skill-card-3d {
+        padding: 24px 20px;
+    }
+
+    .tool-chip {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .skills-badge {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    .skill-header-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-header-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .skill-card-title {
+        font-size: 24px;
+    }
+
+    .skill-tag {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}

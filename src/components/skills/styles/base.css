@@ -1,0 +1,44 @@
+:root {
+    --accent: #8f7aff;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.5);
+    --current-color: #8f7aff;
+    --color: #8f7aff;
+    --color-rgb: 143, 122, 255;
+    --gradient: linear-gradient(135deg, #8f7aff 0%, #6366f1 100%);
+    --angle: 0deg;
+    --delay: 0s;
+}
+
+.skills-section {
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+
+.skills-grid-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.skills-container-ultra {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}

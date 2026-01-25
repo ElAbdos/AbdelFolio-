@@ -1,0 +1,147 @@
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: default;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation: tagIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--delay) + 0.2s) both;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.skill-tag:hover {
+    border-color: var(--color);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(var(--color-rgb), 0.25);
+}
+
+.skill-tag:hover::before {
+    opacity: 0.15;
+}
+
+.skill-tag-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--gradient);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--color);
+    flex-shrink: 0;
+}
+
+/* ----- Tools Grid ----- */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tool-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: default;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation: chipIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--delay) + 0.6s) both;
+}
+
+.tool-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color);
+    color: var(--text-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(var(--color-rgb), 0.3);
+}
+
+.tool-chip svg {
+    color: var(--color);
+    transition: transform 0.3s ease;
+}
+
+.tool-chip:hover svg {
+    transform: translateX(3px);
+}
+
+/* ----- Mobile Navigation ----- */
+.skills-mobile-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-mobile-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 100px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.mobile-nav-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+}
+
+.mobile-nav-item.active {
+    background: var(--color);
+    border-color: transparent;
+    color: #000;
+    box-shadow: 0 10px 30px rgba(var(--color-rgb), 0.4);
+}
+
+.mobile-nav-item.active svg {
+    color: #000;
+}

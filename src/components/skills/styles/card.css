@@ -1,0 +1,121 @@
+.skills-showcase {
+    width: 100%;
+    max-width: 900px;
+    perspective: 1000px;
+}
+
+.skill-card-3d {
+    position: relative;
+    background: rgba(18, 18, 23, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 60px;
+    transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+    animation: cardEnter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.skill-card-3d:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card-spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-header-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-header-icon svg {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+}
+
+.skill-title-block {
+    flex: 1;
+}
+
+.skill-card-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.skill-card-subtitle-progression {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0;
+}
+
+.skill-card-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 50px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.section-label svg {
+    color: var(--accent);
+}

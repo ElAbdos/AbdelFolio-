@@ -29,7 +29,6 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
         }}>
         <span className="arrow"></span>
         <span className="timeline-year">
-          <span>📈</span>
           {step.year}
         </span>
         <h3 className="timeline-item-title">{step.title}</h3>
