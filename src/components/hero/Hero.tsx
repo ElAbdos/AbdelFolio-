@@ -1,5 +1,5 @@
 import React from 'react';
-import { translations } from '@/constants/translations.ts';
+import { translations } from '@/constants/translations';
 import { useTypewriter } from './hooks';
 import { SOCIAL_LINKS, HERO_STATS, CV_PATH, PROFILE_IMAGE_PATH } from './constants';
 import type { HeroProps } from './types';
