@@ -13,71 +13,129 @@ export interface ProjectData {
   skills: ProjectSkillLink[];
   github: string;
   demo: string;
+  image: string;
 }
 
 export const PROJECTS_DATA: ProjectData[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'AbdelFolio',
     category: 'Développement Web',
-    description: 'Plateforme complète prouvant la capacité à "Réaliser" et "Gérer" des données transactionnelles.',
-    year: '2025',
+    description: 'Portfolio étudiant en React regroupant mes projets personnels et académiques, ainsi que mes compétences.',
+    year: '2026',
     color: '#8f7aff',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    tags: ['React', 'TypeScript', 'Vite', 'EmailJS'],
     skills: [
       { categoryId: 'realiser' },
       { categoryId: 'gerer' },
-      { categoryId: 'collaborer' },
     ],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
+    github: 'https://github.com/ElAbdos/AbdelFolio',
+    demo: 'https://demo.com',
+    image: '/images/projects/abdelfolio.webp'
   },
   {
     id: 2,
-    title: 'Secure Network Infra',
-    category: 'Réseau & Sécurité',
-    description: 'Architecture réseau validant la compétence "Administrer" et la sécurisation des échanges.',
-    year: '2024',
-    color: '#00d4ff',
-    tags: ['Cisco', 'pfSense', 'VPN', 'VLAN'],
+    title: 'Spring-Blog',
+    category: 'API & Backend',
+    description: 'API Spring Boot pour la gestion d\'articles de blog (TP Spring IUT Informatique R5.A05).',
+    year: '2025',
+    color: '#16a34a',
+    tags: ['Spring Boot', 'Java', 'API REST', 'CRUD'],
     skills: [
+      { categoryId: 'realiser' },
       { categoryId: 'administrer' },
-      { categoryId: 'conduire' },
+      { categoryId: 'gerer' },
     ],
-    github: 'https://github.com',
-    demo: '#'
+    github: 'https://github.com/ElAbdos/spring-blog',
+    demo: '#',
+    image: '/images/projects/spring.png'
   },
   {
     id: 3,
-    title: 'AI Image Classifier',
-    category: 'Intelligence Artificielle',
-    description: 'Projet d\'IA illustrant la capacité à "Optimiser" des algorithmes complexes.',
-    year: '2024',
-    color: '#6bcb77',
-    tags: ['Python', 'TensorFlow', 'Keras', 'OpenCV'],
+    title: 'Tempest',
+    category: 'Développement mobile',
+    description: 'Application météo mobile (React Native/Expo) affichant les prévisions via API.',
+    year: '2026',
+    color: '#ffd166',
+    tags: ['TypeScript', 'React Native', 'Expo', 'NativeWind', 'Tailwind CSS', 'REST API', 'Geolocation'],
     skills: [
       { categoryId: 'realiser' },
       { categoryId: 'optimiser' },
-      { categoryId: 'gerer' },
     ],
-    github: 'https://github.com',
-    demo: '#'
+    github: 'https://github.com/ElAbdos/tempest',
+    demo: '#',
+    image: '/images/projects/tempest.png'
   },
   {
     id: 4,
-    title: 'Task Manager App',
-    category: 'Mobile Development',
-    description: 'App mobile collaborative, preuve de "Collaborer" et "Conduire" un projet agile.',
-    year: '2023',
-    color: '#ff6b6b',
-    tags: ['Flutter', 'Firebase', 'Dart'],
+    title: 'Echoo Messagerie',
+    category: 'Développement Web',
+    description: 'Application web de messagerie en temps réel en PHP et JavaScript — gestion des utilisateurs, conversations privées, liste d\'amis et échanges asynchrones via AJAX.',
+    year: '2024-2025',
+    color: '#0077ff',
+    tags: ['PHP', 'JavaScript', 'MySQL', 'AJAX', 'Tailwind CSS'],
     skills: [
       { categoryId: 'realiser' },
       { categoryId: 'collaborer' },
       { categoryId: 'conduire' },
     ],
-    github: 'https://github.com',
-    demo: '#'
+    github: 'https://github.com/ElAbdos/Echoo_Messagerie-2024--2025-',
+    demo: '#',
+    image: '/images/projects/Logo_Echoo.png'
+  },
+  {
+    id: 5,
+    title: 'SmartBites',
+    category: 'Application mobile',
+    description: 'Application mobile Flutter pour gérer listes de courses et recettes, avec planification de repas.',
+    year: '2025-2026',
+    color: '#ff9f1c',
+    tags: ['Flutter', 'Dart', 'Supabase', 'Riverpod', 'shared_preferences', 'image_picker', 'intl'],
+    skills: [
+      { categoryId: 'realiser' },
+      { categoryId: 'collaborer' },
+      { categoryId: 'conduire' },
+      { categoryId: 'optimiser' },
+    ],
+    github: 'https://github.com/fortwoone/SmartBites',
+    demo: '#',
+    image: '/images/projects/smartbites.png'
+  },
+  {
+    id: 6,
+    title: 'BlumBat — Gestion immobilière',
+    category: 'Application de bureau (Java)',
+    description: 'Application Java de gestion immobilière (biens, locataires, travaux, facturation) avec interface Swing et persistance MySQL.',
+    year: '2024-2025',
+    color: '#2E7D32',
+    tags: ['Java', 'Swing', 'Maven', 'MySQL', 'JDBC', 'MVC', 'DAO', 'JUnit'],
+    skills: [
+      { categoryId: 'realiser' },
+      { categoryId: 'collaborer' },
+      { categoryId: 'conduire' },
+      { categoryId: 'optimiser' },
+    ],
+    github: 'https://github.com/ElAbdos/BlumBat',
+    demo: '#',
+    image: '/images/projects/blumbat.png'
+  },
+  {
+    id: 7,
+    title: 'Système de recommandation collaborative (Python)',
+    category: 'Script / Analyse de données (Python)',
+    description: 'Prototype de recommandation collaborative (user/item) — similarités Cosinus/Pearson, prédictions par k‑NN, évaluation et visualisation (pandas, NumPy, matplotlib).',
+    year: '2024-2025',
+    color: '#1976D2',
+    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Filtrage collaboratif', 'Cosinus', 'Pearson', 'Évaluation'],
+    skills: [
+      { categoryId: 'realiser' },
+      { categoryId: 'collaborer' },
+      { categoryId: 'conduire' },
+      { categoryId: 'optimiser' },
+    ],
+    github: 'https://github.com/ElAbdos/systeme-de-recommandation',
+    demo: '#',
+    image: '/images/projects/Python.svg.png'
   }
 ];
 
@@ -90,7 +148,6 @@ export const CATEGORY_INFO: Record<string, { color: string; nameFR: string; name
   conduire: { color: '#a855f7', nameFR: 'Conduire', nameEN: 'Lead' },
   collaborer: { color: '#ec4899', nameFR: 'Collaborer', nameEN: 'Collaborate' },
 };
-
 
 // Fonction pour obtenir la couleur d'une catégorie
 export const getCategoryColor = (categoryId: string): string => {

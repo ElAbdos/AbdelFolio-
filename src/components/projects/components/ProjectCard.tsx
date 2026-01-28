@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, ExternalLink, Folder, Code2, Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, ExternalLink, Code2, Award } from 'lucide-react';
 import type { ProjectItem } from '../types';
 import { getCategoryColor, getCategoryName } from '../constants';
 
@@ -14,7 +14,16 @@ interface ProjectCardProps {
   currentLanguage?: 'FR' | 'EN';
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({project, positionClass, onSelect, viewSkillsLabel = 'Compétences utilisées', technicalStackLabel = 'Stack technique', onSkillClick, currentLanguage = 'FR',}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  project,
+  positionClass,
+  onSelect,
+  viewSkillsLabel = 'Compétences utilisées',
+  technicalStackLabel = 'Stack technique',
+  onSkillClick,
+  currentLanguage = 'FR',
+}) => {
+  const [imageError, setImageError] = useState(false);
   const hasSkills = project.skills && project.skills.length > 0;
   const cardColorRgb = hexToRgb(project.color);
 
@@ -25,13 +34,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, positionClass,
     }
   };
 
+  const hasImage = project.image && !imageError;
+
   return (
-    <div className={`project-card-3d ${positionClass}`} onClick={onSelect} style={{ '--card-color': project.color, '--card-color-rgb': cardColorRgb } as React.CSSProperties}>
+    <div
+      className={`project-card-3d ${positionClass}`}
+      onClick={onSelect}
+      style={{
+        '--card-color': project.color,
+        '--card-color-rgb': cardColorRgb,
+      } as React.CSSProperties}
+    >
       <div className="project-visual">
         <div className="project-visual-overlay"></div>
-        <div className="project-icon-placeholder">
-          <Folder size={64} color={project.color} />
-        </div>
+        {hasImage ? (
+          <img
+            src={project.image}
+            alt={`${project.title} logo`}
+            className="project-logo"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="project-initials" style={{ background: project.color }}>
+            {project.title.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}
+          </div>
+        )}
         <div className="project-year">{project.year}</div>
       </div>
 
@@ -45,8 +72,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, positionClass,
             <Code2 size={14} />
             <span>{technicalStackLabel}</span>
           </div>
-          <div className="project-tags">{project.tags.map((tag, i) => (
-              <span key={i} className="project-tag">{tag}</span>
+          <div className="project-tags">
+            {project.tags.map((tag, i) => (
+              <span key={i} className="project-tag">
+                {tag}
+              </span>
             ))}
           </div>
         </div>
@@ -63,12 +93,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, positionClass,
                 const categoryColor = getCategoryColor(skill.categoryId);
                 const categoryName = getCategoryName(skill.categoryId, currentLanguage);
                 return (
-                  <button key={skill.categoryId} className="skill-category-badge" onClick={(e) => handleSkillBadgeClick(e, skill.categoryId)}
+                  <button
+                    key={skill.categoryId}
+                    className="skill-category-badge"
+                    onClick={(e) => handleSkillBadgeClick(e, skill.categoryId)}
                     style={{
                       '--skill-color': categoryColor,
                       '--skill-color-rgb': hexToRgb(categoryColor),
                     } as React.CSSProperties}
-                    title={`Cliquez pour voir ${categoryName}`}>
+                    title={`Cliquez pour voir ${categoryName}`}
+                  >
                     {categoryName}
                   </button>
                 );
@@ -79,12 +113,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, positionClass,
 
         {/* Liens GitHub et Demo */}
         <div className="project-links">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-btn github" onClick={(e) => e.stopPropagation()}>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-btn github"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Github size={18} />
             GitHub
           </a>
           {project.demo && project.demo !== '#' && (
-            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-btn demo" onClick={(e) => e.stopPropagation()}>
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-btn demo"
+              onClick={(e) => e.stopPropagation()}
+            >
               <ExternalLink size={18} />
               Live Demo
             </a>
@@ -98,5 +144,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, positionClass,
 // Helper pour convertir hex en RGB
 const hexToRgb = (hex: string): string => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '143, 122, 255';
+  return result
+    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+    : '143, 122, 255';
 };

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 750px;
     perspective: 1200px;
 }
 
@@ -59,9 +59,17 @@
 
 /* ----- Indicators ----- */
 .carousel-indicators {
-    display: flex;
+    display: none;
+    /* Caché par défaut sur desktop */
     gap: 12px;
     margin-top: 40px;
+}
+
+/* Afficher les indicateurs seulement sur mobile */
+@media (max-width: 900px) {
+    .carousel-indicators {
+        display: flex;
+    }
 }
 
 .indicator-dot {

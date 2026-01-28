@@ -3,39 +3,50 @@
    ========================================================================== */
 
 /* Tablette */
+@media (max-width: 1200px) {
+    .project-card-3d {
+        width: 420px;
+        height: 620px;
+    }
+
+    .carousel-3d-wrapper {
+        height: 680px;
+    }
+
+    .project-card-3d.prev {
+        transform: translateX(-360px) scale(0.85) rotateY(15deg) translateZ(-40px);
+    }
+
+    .project-card-3d.next {
+        transform: translateX(360px) scale(0.85) rotateY(-15deg) translateZ(-40px);
+    }
+
+    .project-visual {
+        height: 180px;
+        /* Reduced for V3 */
+    }
+}
+
 @media (max-width: 1024px) {
     .projects-section {
         padding: 80px 20px 120px;
     }
 
-    .projects-header {
-        margin-bottom: 60px;
+    .project-card-3d {
+        width: 380px;
+        height: 580px;
     }
 
-    .project-card-3d {
-        width: 350px;
-        height: 520px;
+    .carousel-3d-wrapper {
+        height: 640px;
     }
 
     .project-card-3d.prev {
-        transform: translateX(-280px) scale(0.85) matrix3d(0.9, 0, 0.25, 0, 0, 1, 0, 0, -0.43, 0, 0.9, 0, 0, 0, 0, 1);
+        transform: translateX(-320px) scale(0.85) rotateY(15deg) translateZ(-40px);
     }
 
     .project-card-3d.next {
-        transform: translateX(280px) scale(0.85) matrix3d(0.9, 0, -0.25, 0, 0, 1, 0, 0, 0.43, 0, 0.9, 0, 0, 0, 0, 1);
-    }
-
-    .carousel-control {
-        width: 48px;
-        height: 48px;
-    }
-
-    .carousel-control.prev {
-        left: 10px;
-    }
-
-    .carousel-control.next {
-        right: 10px;
+        transform: translateX(320px) scale(0.85) rotateY(-15deg) translateZ(-40px);
     }
 }
 
@@ -45,284 +56,113 @@
         padding: 60px 15px 100px;
     }
 
-    .projects-header {
-        margin-bottom: 50px;
-    }
-
-    .projects-badge {
-        font-size: 11px;
-        padding: 8px 16px;
-    }
-
-    .projects-subtitle {
-        font-size: 15px;
-    }
-
     .carousel-3d-wrapper {
-        height: 500px;
+        height: 600px;
     }
 
     .project-card-3d {
-        width: 300px;
-        height: 480px;
+        width: 340px;
+        height: 540px;
+    }
+
+    .project-visual {
+        height: 160px;
+        /* Reduced for V3 */
     }
 
     .project-card-3d.prev {
-        transform: translateX(-150px) scale(0.85);
-        z-index: 5;
-        opacity: 0.5;
+        transform: translateX(-240px) scale(0.85) rotateY(10deg);
+        opacity: 0.4;
     }
 
     .project-card-3d.next {
-        transform: translateX(150px) scale(0.85);
-        z-index: 5;
-        opacity: 0.5;
+        transform: translateX(240px) scale(0.85) rotateY(-10deg);
+        opacity: 0.4;
     }
 
     .project-title {
-        font-size: 18px;
+        font-size: 24px;
     }
 
-    .project-desc {
-        font-size: 12px;
-    }
-
-    .carousel-control {
-        width: 44px;
-        height: 44px;
+    .project-logo {
+        width: 100px;
+        height: 100px;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .projects-section {
-        padding: 40px 10px 80px;
-    }
-
-    .projects-header {
-        margin-bottom: 40px;
-    }
-
-    .projects-badge {
-        font-size: 10px;
-        padding: 6px 14px;
-        margin-bottom: 16px;
-    }
-
-    .section-tag {
-        font-size: 10px;
-        padding: 6px 14px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .section-subtitle {
-        font-size: 13px;
-        max-width: 100%;
-    }
-
     .carousel-3d-wrapper {
-        height: 450px;
+        height: 580px;
         perspective: none;
     }
 
-    .carousel-scene {
-        perspective: none;
-        transform-style: flat;
+    .project-card-3d {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 550px;
+    }
+
+    .project-card-3d.prev {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+
+    .project-card-3d.next {
+        transform: translateX(100vw);
+        opacity: 0;
     }
 
     .carousel-control {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        top: calc(100% + 50px);
-    }
-
-    .carousel-control.prev {
-        left: calc(50% - 50px);
-    }
-
-    .carousel-control.next {
-        right: calc(50% - 50px);
-    }
-
-    .carousel-indicators {
-        margin-top: 30px;
-        gap: 8px;
-    }
-
-    .indicator-dot {
-        width: 8px;
-        height: 8px;
-    }
-
-    .indicator-dot.active {
-        width: 24px;
+        top: calc(100% + 20px);
+        transform: none;
     }
 }
 
 /* Petit mobile */
 @media (max-width: 600px) {
     .projects-section {
-        padding: 30px 10px 60px;
-    }
-
-    .projects-header {
-        margin-bottom: 30px;
-    }
-
-    .projects-badge {
-        font-size: 9px;
-        padding: 5px 12px;
-        margin-bottom: 12px;
-        letter-spacing: 1px;
-    }
-
-    .projects-subtitle {
-        font-size: 13px;
+        padding: 40px 10px 80px;
     }
 
     .carousel-3d-wrapper {
-        height: 420px;
-        overflow: visible;
+        height: auto;
+        min-height: 500px;
+        margin-bottom: 60px;
     }
 
     .project-card-3d {
         position: relative;
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
         left: 0;
         margin-left: 0;
         height: auto;
-        min-height: 450px;
+        min-height: auto;
         transform: none !important;
         opacity: 1 !important;
+        margin-bottom: 20px;
     }
 
-    .project-card-3d.prev,
-    .project-card-3d.next,
-    .project-card-3d.hidden-left,
-    .project-card-3d.hidden-right {
-        position: absolute;
-        opacity: 0;
-        pointer-events: none;
-        visibility: hidden;
-    }
-
-    .project-card-3d.active {
-        position: relative;
-        transform: none;
-        left: 0;
-        margin-left: 0;
-    }
-
-    .project-visual {
-        height: 160px;
-    }
-
-    .project-icon-placeholder svg {
-        width: 48px;
-        height: 48px;
-    }
-
-    .project-info {
-        padding: 16px;
+    .project-logo {
+        width: 90px;
+        height: 90px;
     }
 
     .project-title {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .project-desc {
-        font-size: 12px;
-        margin-bottom: 12px;
-    }
-
-    .project-section {
-        margin-bottom: 12px;
-    }
-
-    .project-section-label {
-        font-size: 9px;
-        gap: 4px;
-    }
-
-    .project-tag {
-        font-size: 10px;
-        padding: 4px 8px;
-    }
-
-    .skill-category-badge {
-        font-size: 10px;
-        padding: 5px 10px;
-    }
-
-    .project-links {
-        opacity: 1;
-        transform: translateY(0);
-        gap: 8px;
-        margin-top: 12px;
-    }
-
-    .project-btn {
-        padding: 10px;
-        font-size: 12px;
-        gap: 6px;
-    }
-
-    .project-btn svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .carousel-control {
-        width: 36px;
-        height: 36px;
-        top: calc(100% + 40px);
-    }
-
-    .carousel-control.prev {
-        left: calc(50% - 45px);
-    }
-
-    .carousel-control.next {
-        right: calc(50% - 45px);
-    }
-}
-
-/* Très petit mobile */
-@media (max-width: 380px) {
-    .project-card-3d {
-        min-height: 480px;
+        font-size: 22px;
     }
 
     .project-visual {
-        height: 140px;
+        height: 150px;
+        /* Reduced for V3 */
     }
 
-    .project-title {
-        font-size: 16px;
-    }
-
-    .project-desc {
-        font-size: 11px;
-    }
-
-    .section-title {
-        font-size: 20px;
-    }
-
-    .carousel-control {
-        width: 32px;
-        height: 32px;
-    }
-
-    .carousel-control svg {
-        width: 16px;
-        height: 16px;
+    .project-initials {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
     }
 }
 

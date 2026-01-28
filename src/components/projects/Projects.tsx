@@ -9,10 +9,14 @@ import './styles/index.css';
 const Projects: React.FC<ProjectsProps> = ({ currentLanguage }) => {
   const t = translations[currentLanguage].projects;
 
-  const projects = PROJECTS_DATA.map(project => ({
-    ...project,
-    ...(t.items.find((item: any) => item.id === project.id) || {}),
-  }));
+  const projects = PROJECTS_DATA.map(project => {
+    const translatedItem = t.items.find((item: any) => item.id === project.id);
+    return {
+      ...project,
+      ...(translatedItem || {}),
+      image: project.image, // Toujours conserver l'image depuis PROJECTS_DATA
+    };
+  });
 
   const { activeIndex, nextProject, prevProject, selectProject, getCardStyle } = useCarousel(projects.length);
 

@@ -16,6 +16,7 @@ export interface ProjectItem {
   color: string;
   github: string;
   demo: string;
+  image?: string;
 }
 
 export interface ProjectsTranslations {

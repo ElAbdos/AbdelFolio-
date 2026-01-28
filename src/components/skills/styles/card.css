@@ -1,10 +1,8 @@
-/* ----- Card Container ----- */
 .skills-showcase {
     width: 100%;
     perspective: 1000px;
 }
 
-/* ----- Main Card ----- */
 .skill-card-3d {
     position: relative;
     background: rgba(15, 17, 23, 0.95);
@@ -19,7 +17,6 @@
     animation: cardReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* ----- Spotlight Effect ----- */
 .card-spotlight {
     position: absolute;
     top: 0;
@@ -38,7 +35,6 @@
     }
 }
 
-/* ----- Colorful Top Bar ----- */
 .skill-card-3d::before {
     content: '';
     position: absolute;
@@ -58,7 +54,6 @@
         0 0 0 1px rgba(255, 255, 255, 0.08) inset;
 }
 
-/* ----- Card Header ----- */
 .skill-card-header {
     display: flex;
     align-items: center;
@@ -103,8 +98,7 @@
     letter-spacing: -1px;
 }
 
-.skill-card-subtitle,
-.skill-card-subtitle-progression {
+.skill-card-subtitle, .skill-card-subtitle-progression {
     font-size: 14px;
     color: var(--color, #8f7aff);
     font-weight: 600;
@@ -113,7 +107,6 @@
     margin-top: 4px;
 }
 
-/* ----- Description ----- */
 .skill-card-description {
     font-size: 15px;
     line-height: 1.7;
@@ -123,7 +116,6 @@
     z-index: 2;
 }
 
-/* ----- Skills Grid ----- */
 .skills-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
