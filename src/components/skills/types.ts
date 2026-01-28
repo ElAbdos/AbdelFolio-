@@ -8,7 +8,7 @@ export interface SkillCategory {
   description: string;
   tagline: string;
   languages: string[];
-  frameworks: string[];
+  frameworks?: string[];
   architectures?: string[];
   tests?: string[];
   methods?: string[];

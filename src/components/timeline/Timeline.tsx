@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { translations } from '@/constants/translations';
 import { useTimelineScroll, useCardMouseTracking } from './hooks';
-import type { TimelineProps } from './types';
+import type { TimelineProps, TimelineStep } from './types';
 import { TimelineHeader, TimelineBackground, TimelineTrack } from './components';
 
 import './styles/index.css';
@@ -19,7 +19,13 @@ const Timeline: React.FC<TimelineProps> = ({ currentLanguage }) => {
 
       <div className="timeline-container">
         <TimelineHeader tag={t.tag} title={t.title} subtitle={t.subtitle} />
-          <TimelineTrack steps={t.steps} progressHeight={progressHeight} onMouseMove={handleCardMouseMove}/>
+          <TimelineTrack steps={t.steps as TimelineStep[]} progressHeight={progressHeight} onMouseMove={handleCardMouseMove}
+            translations={{
+              experiences_label: t.experiences_label,
+              status_completed: t.status_completed,
+              status_in_progress: t.status_in_progress,
+              status_searching: t.status_searching,
+            }}/>
       </div>
     </section>
   );

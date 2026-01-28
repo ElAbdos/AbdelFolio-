@@ -6,15 +6,21 @@ interface TimelineTrackProps {
   steps: TimelineStep[];
   progressHeight: number;
   onMouseMove: (e: MouseEvent, el: HTMLElement | null) => void;
+  translations: {
+    experiences_label: string;
+    status_completed: string;
+    status_in_progress: string;
+    status_searching: string;
+  };
 }
 
-export const TimelineTrack: React.FC<TimelineTrackProps> = ({steps, progressHeight, onMouseMove,}) => {
+export const TimelineTrack: React.FC<TimelineTrackProps> = ({steps, progressHeight, onMouseMove, translations}) => {
   return (
     <div className="timeline-track">
       <div className="timeline-line"></div>
       <div className="timeline-progress-bar" style={{ height: `${progressHeight}%` }}></div>
       {steps.map((step, index) => (
-        <TimelineItem key={index} step={step} index={index} progressHeight={progressHeight} totalSteps={steps.length} onMouseMove={onMouseMove}/>
+        <TimelineItem key={index} step={step} index={index} progressHeight={progressHeight} totalSteps={steps.length} onMouseMove={onMouseMove} translations={translations}/>
       ))}
     </div>
   );

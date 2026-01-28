@@ -12,11 +12,20 @@ const Skills: React.FC<SkillsProps> = ({ currentLanguage }) => {
   const [activeTab, setActiveTab] = useState('realiser');
 
   const { cardRef, mousePosition, transform, handleMouseMove, handleMouseLeave } = use3DCardEffect();
+
+  // Helper pour récupérer les traductions de catégorie avec fallback
+  const getCategoryTranslations = (categoryId: string) => {
+    const catTrans = (t.categories as Record<string, { title?: string; subtitle?: string; description?: string }>)[categoryId];
+    return {
+      title: catTrans?.title || SKILL_CATEGORIES.find(c => c.id === categoryId)?.title || '',
+      subtitle: catTrans?.subtitle || SKILL_CATEGORIES.find(c => c.id === categoryId)?.subtitle || '',
+      description: catTrans?.description || SKILL_CATEGORIES.find(c => c.id === categoryId)?.description || '',
+    };
+  };
+
   const skillCategories = SKILL_CATEGORIES.map(cat => ({
     ...cat,
-    title: t.categories[cat.id as keyof typeof t.categories]?.title || cat.title,
-    subtitle: t.categories[cat.id as keyof typeof t.categories]?.subtitle || cat.subtitle,
-    description: t.categories[cat.id as keyof typeof t.categories]?.description || cat.description,
+    ...getCategoryTranslations(cat.id),
   }));
 
   const activeCategory = skillCategories.find(c => c.id === activeTab) || skillCategories[0];

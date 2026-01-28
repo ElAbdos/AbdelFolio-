@@ -56,14 +56,14 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({category, mousePosition, 
               </div>
             </div>
           )}
-            {category.frameworks?.length > 0 && (
+            {(category.frameworks?.length ?? 0) > 0 && (
             <div className="skills-column">
               <h4 className="section-label">
                 <Layout size={18} />
                 <span>{sectionLabels.frameworks}</span>
               </h4>
               <div className="skills-tags">
-                {category.frameworks.map((fw, idx) => (
+                {category.frameworks?.map((fw, idx) => (
                   <SkillTag key={idx} label={fw} delay={idx * 0.06} color={category.color} colorRgb={colorRgb} gradient={category.gradient}/>
                 ))}
               </div>

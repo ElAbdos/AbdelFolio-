@@ -9,17 +9,23 @@ interface TimelineItemProps {
   progressHeight: number;
   totalSteps: number;
   onMouseMove: (e: MouseEvent, el: HTMLElement | null) => void;
+  translations: {
+    experiences_label: string;
+    status_completed: string;
+    status_in_progress: string;
+    status_searching: string;
+  };
 }
 
-const ExperienceCard: React.FC<{ exp: ProfessionalExperience }> = ({ exp }) => {
+const ExperienceCard: React.FC<{ exp: ProfessionalExperience; translations: TimelineItemProps['translations'] }> = ({ exp, translations }) => {
   const getStatusBadge = () => {
     switch (exp.status) {
       case 'completed':
-        return <span className="exp-status completed">✓ Terminé</span>;
+        return <span className="exp-status completed">✓ {translations.status_completed}</span>;
       case 'in-progress':
-        return <span className="exp-status in-progress">● En cours</span>;
+        return <span className="exp-status in-progress">● {translations.status_in_progress}</span>;
       case 'searching':
-        return <span className="exp-status searching"><Search size={12} /> En recherche</span>;
+        return <span className="exp-status searching"><Search size={12} /> {translations.status_searching}</span>;
     }
   };
 
@@ -39,7 +45,7 @@ const ExperienceCard: React.FC<{ exp: ProfessionalExperience }> = ({ exp }) => {
   );
 };
 
-export const TimelineItem: React.FC<TimelineItemProps> = ({step, index, progressHeight, totalSteps, onMouseMove,}) => {
+export const TimelineItem: React.FC<TimelineItemProps> = ({step, index, progressHeight, totalSteps, onMouseMove, translations}) => {
   const isEven = index % 2 === 0;
   const isReached = progressHeight > ((index + 0.5) / totalSteps) * 100;
 
@@ -59,9 +65,9 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({step, index, progress
 
         {step.experiences && step.experiences.length > 0 && (
           <div className="timeline-experiences">
-            <div className="experiences-label">Expériences professionnelles</div>
+            <div className="experiences-label">{translations.experiences_label}</div>
             {step.experiences.map((exp, expIndex) => (
-              <ExperienceCard key={expIndex} exp={exp} />
+              <ExperienceCard key={expIndex} exp={exp} translations={translations} />
             ))}
           </div>
         )}

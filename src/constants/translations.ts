@@ -91,6 +91,10 @@ export const translations = {
             tag: 'Parcours',
             title: 'Ma Progression',
             subtitle: 'Mon itinéraire d\'acquisition de compétences depuis le BUT 1.',
+            experiences_label: 'Expériences professionnelles',
+            status_completed: 'Terminé',
+            status_in_progress: 'En cours',
+            status_searching: 'En recherche',
             steps: [
                 {
                     year: '2023 - 2024',
@@ -313,6 +317,10 @@ export const translations = {
             tag: 'Pathway',
             title: 'My Progression',
             subtitle: 'My journey of skill acquisition since Year 1.',
+            experiences_label: 'Professional Experiences',
+            status_completed: 'Completed',
+            status_in_progress: 'In Progress',
+            status_searching: 'Searching',
             steps: [
                 {
                     year: '2023 - 2024',
