@@ -1,36 +1,22 @@
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .skills-orbit-container {
-        display: block;
+        display: block !important;
     }
 
     .skills-mobile-nav {
         display: none;
     }
 
-    .skills-container-ultra {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr;
-        gap: 40px;
-        align-items: start;
-    }
-
-    .skills-header-ultra {
-        grid-column: 1 / -1;
-        text-align: center;
-    }
-
-    .skills-orbit-container {
-        justify-self: center;
-        max-width: 500px;
-    }
-
-    .skills-showcase {
-        max-width: 100%;
+    .skills-nav-column {
+        display: flex !important;
     }
 }
 
 @media (max-width: 1199px) {
+    .skills-content-grid {
+        grid-template-columns: 1fr;
+    }
+
     .skills-orbit-container {
         display: none;
     }

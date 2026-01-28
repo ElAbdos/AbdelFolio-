@@ -1,26 +1,25 @@
+/* ----- Card Container ----- */
 .skills-showcase {
     width: 100%;
-    max-width: 900px;
     perspective: 1000px;
 }
 
+/* ----- Main Card ----- */
 .skill-card-3d {
     position: relative;
-    background: rgba(18, 18, 23, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 60px;
-    transition: transform 0.1s ease-out, box-shadow 0.3s ease;
-    animation: cardEnter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    background: rgba(15, 17, 23, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
     overflow: hidden;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    animation: cardReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.skill-card-3d:hover {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.12);
-}
-
+/* ----- Spotlight Effect ----- */
 .card-spotlight {
     position: absolute;
     top: 0;
@@ -28,18 +27,47 @@
     right: 0;
     bottom: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
+    opacity: 0.6;
 }
 
+@keyframes cardReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ----- Colorful Top Bar ----- */
+.skill-card-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient, linear-gradient(90deg, #8f7aff, #6366f1));
+    box-shadow: 0 0 20px var(--color, #8f7aff);
+}
+
+.skill-card-3d:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.5),
+        0 0 50px -10px rgba(var(--color-rgb, 143, 122, 255), 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+/* ----- Card Header ----- */
 .skill-card-header {
     display: flex;
     align-items: center;
-    gap: 24px;
-    margin-bottom: 40px;
+    gap: 20px;
+    padding: 32px;
+    background: linear-gradient(180deg, rgba(var(--color-rgb, 143, 122, 255), 0.08) 0%, transparent 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding-bottom: 30px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .skill-header-icon {
@@ -48,17 +76,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    color: var(--accent);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, rgba(var(--color-rgb, 143, 122, 255), 0.2), rgba(var(--color-rgb, 143, 122, 255), 0.05));
+    border: 2px solid rgba(var(--color-rgb, 143, 122, 255), 0.3);
+    border-radius: 18px;
+    color: var(--color, #8f7aff);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .skill-header-icon svg {
-    width: 32px;
-    height: 32px;
-    color: #fff;
+    width: 30px;
+    height: 30px;
+    color: var(--color, #8f7aff);
 }
 
 .skill-title-block {
@@ -67,36 +96,67 @@
 
 .skill-card-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
-    margin: 0 0 10px 0;
+    margin: 0;
     color: #fff;
     letter-spacing: -1px;
 }
 
+.skill-card-subtitle,
 .skill-card-subtitle-progression {
-    font-size: 1.1rem;
-    color: var(--accent);
-    font-weight: 500;
-    margin: 0;
+    font-size: 14px;
+    color: var(--color, #8f7aff);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 4px;
 }
 
+/* ----- Description ----- */
 .skill-card-description {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 50px;
-    max-width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 28px 32px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
+/* ----- Skills Grid ----- */
 .skills-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 32px 32px 32px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.skills-grid-container > * {
+    opacity: 0;
+    animation: fadeSlideUp 0.5s ease forwards;
+}
+
+.skills-grid-container > *:nth-child(1) { animation-delay: 0.1s; }
+.skills-grid-container > *:nth-child(2) { animation-delay: 0.15s; }
+.skills-grid-container > *:nth-child(3) { animation-delay: 0.2s; }
+.skills-grid-container > *:nth-child(4) { animation-delay: 0.25s; }
+.skills-grid-container > *:nth-child(5) { animation-delay: 0.3s; }
+.skills-grid-container > *:nth-child(6) { animation-delay: 0.35s; }
+.skills-grid-container > *:nth-child(7) { animation-delay: 0.4s; }
+.skills-grid-container > *:nth-child(8) { animation-delay: 0.45s; }
+.skills-grid-container > *:nth-child(9) { animation-delay: 0.5s; }
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .skills-column {
@@ -107,15 +167,15 @@
 .section-label {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 14px;
+    gap: 8px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--text-secondary);
-    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 12px;
     font-weight: 700;
 }
 
 .section-label svg {
-    color: var(--accent);
+    color: var(--color, #8f7aff);
 }

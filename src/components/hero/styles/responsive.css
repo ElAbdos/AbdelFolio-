@@ -36,6 +36,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .profile-box {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-title {
     font-size: 36px;
@@ -48,10 +54,5 @@
   .hero-stats {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-
-  .profile-box {
-    width: 200px;
-    height: 200px;
   }
 }

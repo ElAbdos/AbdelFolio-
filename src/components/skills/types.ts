@@ -9,20 +9,13 @@ export interface SkillCategory {
   tagline: string;
   languages: string[];
   frameworks: string[];
+  architectures?: string[];
+  tests?: string[];
+  methods?: string[];
+  libraries?: string[];
   tools: string[];
   color: string;
   gradient: string;
-}
-
-export interface SkillsTranslations {
-  tag: string;
-  title: string;
-  subtitle: string;
-  categories: Record<string, {
-    title: string;
-    subtitle: string;
-    description: string;
-  }>;
 }
 
 export interface SkillsProps {

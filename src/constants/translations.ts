@@ -36,9 +36,17 @@ export const translations = {
 
         skills: {
             tag: 'Compétences',
-            title: 'Mon Expertise & Progression',
-            subtitle: 'Évolution constante du développement à l\'architecture complexe.',
-            tools: 'Outils',
+            title: 'Compétences & Stack Technique',
+            subtitle: 'Un ensemble de technologies et d’outils mis en pratique à travers des projets concrets et collaboratifs.',
+            sectionLabels: {
+                technologies: 'Technologies',
+                frameworks: 'Méthodes & Frameworks',
+                libraries: 'Bibliothèques IA',
+                architectures: 'Architecture',
+                tests: 'Tests',
+                methods: 'Méthodes',
+                tools: 'Outils'
+            },
             categories: {
                 realiser: {
                     title: 'Réaliser',
@@ -93,14 +101,33 @@ export const translations = {
                 {
                     year: '2024 - 2025',
                     title: 'BUT 2 : L\'Approfondissement',
-                    description: 'Développement d\'applications complexes (n-tiers), optimisation des structures de données et administration système avancée (Services réseaux, Virtualisation). Gestion de projets en méthode Agile.',
-                    icon: 'Cpu'
+                    description: 'Développement d\'applications complexes, optimisation des structures de données et administration système avancée (Services réseaux, Virtualisation). Gestion de projets en méthode Agile.',
+                    icon: 'Cpu',
+                    experiences: [
+                        {
+                            company: 'Stage au sein de l\'entreprise LIDR Solutions',
+                            position: 'Stagiaire - Développement IA',
+                            duration: 'Avril - Juillet 2025',
+                            description: 'Développement d’un agent intelligent et mise en place de workflows d’automatisation.\n' +
+                                'Conception de solutions d’IA appliquées à des cas d’usage métiers, intégration d’API et orchestration de processus via N8N, en collaboration avec une équipe technique agile.',
+                            status: 'completed'
+                        }
+                    ]
                 },
                 {
                     year: '2025 - 2026',
                     title: 'BUT 3 : La Professionnalisation',
-                    description: 'Intégration et déploiement continu (CI/CD), Management d\'équipes techniques et sécurisation des infrastructures. Stage de fin d\'études pour valider l\'expertise professionnelle.',
-                    icon: 'Rocket'
+                    description: 'Approfondissement des compétences en conception et développement d’applications, administration systèmes Linux, gestion de bases de données, virtualisation et méthodes de gestion de projet (Agile/Scrum), à travers des projets pratiques et collaboratifs',
+                    icon: 'Rocket',
+                    experiences: [
+                        {
+                            company: 'En recherche',
+                            position: 'Stage de BUT 3',
+                            duration: '2026',
+                            description: 'À la recherche d\'une entreprise pour un stage de (12-16 semaines) dans le domaine de l\'informatique.',
+                            status: 'searching'
+                        }
+                    ]
                 }
             ]
         },
@@ -110,6 +137,8 @@ export const translations = {
             title: 'Réalisations & Preuves',
             subtitle: 'Projets démontrant l\'acquisition concrète des compétences.',
             view_skills: 'Voir les compétences liées',
+            technicalStack: 'Stack technique',
+            skillsUsed: 'Compétences utilisées',
             items: [
                 {
                     id: 1,
@@ -229,9 +258,17 @@ export const translations = {
 
         skills: {
             tag: 'Skills',
-            title: 'My Expertise & Progression',
-            subtitle: 'Constant evolution from development to complex architecture.',
-            tools: 'Tools',
+            title: 'Tech Stack & Skills',
+            subtitle: 'A set of technologies and tools applied through hands-on and collaborative projects.',
+            sectionLabels: {
+                technologies: 'Technologies',
+                frameworks: 'Methods & Frameworks',
+                libraries: 'AI Libraries',
+                architectures: 'Architecture',
+                tests: 'Tests',
+                methods: 'Methods',
+                tools: 'Tools'
+            },
             categories: {
                 realiser: {
                     title: 'Develop',
@@ -287,13 +324,31 @@ export const translations = {
                     year: '2024 - 2025',
                     title: 'Year 2: Deepening',
                     description: 'Skill enhancement on modern frameworks (React, Symfony). Realizing complex projects in teams (Agile).',
-                    icon: 'Code'
+                    icon: 'Code',
+                    experiences: [
+                        {
+                            company: 'Internship at LIDR Solutions',
+                            position: 'Intern - AI Development',
+                            duration: 'April - July 2025',
+                            description: 'Development of an intelligent agent and implementation of automation workflows. Design of AI solutions applied to business use cases, API integration and process orchestration via N8N, in collaboration with an agile technical team.',
+                            status: 'completed'
+                        }
+                    ]
                 },
                 {
                     year: '2025 - 2026',
                     title: 'Towards Expertise',
-                    description: 'Specialization and professionalization. Seeking internship to apply these robust architectures in a company.',
-                    icon: 'Briefcase'
+                    description: 'Advanced training in application design and development, Linux system administration, database management, virtualization, and project management methodologies (Agile/Scrum), through hands-on and collaborative projects.',
+                    icon: 'Briefcase',
+                    experiences: [
+                        {
+                            company: 'Looking for',
+                            position: 'End-of-studies Internship',
+                            duration: '2026',
+                            description: 'Looking for a company for my end-of-studies internship (12-16 weeks) in the IT field.',
+                            status: 'searching'
+                        }
+                    ]
                 }
             ]
         },
@@ -303,6 +358,8 @@ export const translations = {
             title: 'Achievements & Proofs',
             subtitle: 'Projects demonstrating concrete skill acquisition.',
             view_skills: 'View related skills',
+            technicalStack: 'Tech Stack',
+            skillsUsed: 'Skills Used',
             items: [
                 {
                     id: 1,

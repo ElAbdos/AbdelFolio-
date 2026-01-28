@@ -36,7 +36,7 @@
 .timeline-item:nth-child(6) { transition-delay: 0.6s; }
 
 .timeline-content-wrapper {
-    width: calc(50% - 145px);
+    width: calc(50% - 160px);
     position: relative;
     padding: 36px;
     background: linear-gradient(145deg, rgba(20, 22, 28, 0.9) 0%, rgba(15, 17, 23, 0.95) 100%);
@@ -237,4 +237,112 @@
     line-height: 1.8;
     position: relative;
     z-index: 1;
+}
+
+/* ----- Experiences Professionnelles ----- */
+.timeline-experiences {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experiences-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.timeline-experience {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.timeline-experience:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-experience:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(143, 122, 255, 0.2);
+}
+
+.timeline-experience.searching {
+    background: linear-gradient(135deg, rgba(143, 122, 255, 0.08) 0%, rgba(143, 122, 255, 0.03) 100%);
+    border-color: rgba(143, 122, 255, 0.2);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.exp-company {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exp-company-name {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+.exp-status {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.exp-status.completed {
+    background: rgba(107, 203, 119, 0.15);
+    color: #6bcb77;
+    border: 1px solid rgba(107, 203, 119, 0.3);
+}
+
+.exp-status.in-progress {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.exp-status.searching {
+    background: rgba(143, 122, 255, 0.15);
+    color: #8f7aff;
+    border: 1px solid rgba(143, 122, 255, 0.3);
+}
+
+.exp-position {
+    font-size: 13px;
+    color: var(--timeline-primary);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.exp-duration {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.exp-description {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin: 0;
 }
