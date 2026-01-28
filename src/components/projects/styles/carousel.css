@@ -59,16 +59,18 @@
 
 /* ----- Indicators ----- */
 .carousel-indicators {
-    display: none;
-    /* Caché par défaut sur desktop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
     margin-top: 40px;
+    width: 100%;
 }
 
-/* Afficher les indicateurs seulement sur mobile */
-@media (max-width: 900px) {
+/* Cacher les indicateurs sur desktop (au-dessus de 1024px) */
+@media (min-width: 1025px) {
     .carousel-indicators {
-        display: flex;
+        display: none;
     }
 }
 
