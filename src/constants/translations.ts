@@ -154,7 +154,7 @@ export const translations = {
                     tags: ['React', 'TypeScript', 'Vite', 'EmailJS'],
                     linkedSkills: ['realiser', 'gerer'],
                     github: 'https://github.com/ElAbdos/AbdelFolio',
-                    demo: 'https://demo.com', //TODO : A faire une fois que je l'aurais mis sur vercel
+                    demo: 'https://abdel-folio.vercel.app/',
                     image: '/images/projects/abdelfolio.webp'
                 },
                 {
@@ -422,7 +422,7 @@ export const translations = {
                     tags: ['React', 'TypeScript', 'Vite', 'EmailJS'],
                     linkedSkills: ['realiser', 'gerer'],
                     github: 'https://github.com/ElAbdos/AbdelFolio',
-                    demo: 'https://demo.com',
+                    demo: 'https://abdel-folio.vercel.app/',
                     image: '/images/projects/abdelfolio.webp'
                 },
                 {
